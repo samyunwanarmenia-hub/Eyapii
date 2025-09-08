@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пирамида Богатства</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js" defer></script>
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/npm/three@0.134.0/build/three.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+</head>
+<body>
+    <h1>🌟 Привет, <span id="user-name">Игрок</span>!</h1>
+    <h2>Децентрализованная сеть Пирамиды Богатства 🤑</h2>
+    <div id="fan">
+        <div id="fan-3d"></div>
+        <div id="particles-js"></div>
+        <p>Вентилятор пассивного дохода: <span id="fan-speed">1x</span></p>
+        <p>Баланс USD: <span id="eva-balance">0</span></p>
+        <p>Ранг: <span id="user-rank">Новичок 🐣</span></p>
+    </div>
+    <button id="join-pyramid-btn" aria-label="Вступить в пирамиду">Вступить 🤑</button>
+    <button id="buy-power-btn" aria-label="Купить мощность">Купить мощность ⚡</button>
+    <button id="withdraw-btn" aria-label="Вывести средства">Вывод 💸</button>
+    <button id="join-guild-btn" aria-label="Вступить в гильдию">Вступить в гильдию 🛡️</button>
+    <button id="vote-payout-btn" aria-label="Голосовать за процент выплат">Голосовать 📊</button>
+    <button id="show-leaderboard-btn" aria-label="Показать лидерборд">Лидерборд 🥇</button>
+    <button id="pay-usd-btn" aria-label="Оплатить в USD">Оплатить в USD 💵</button>
+    <div id="event">
+        <h2>🔥 Лимитированный ивент!</h2>
+        <p id="timer">Осталось: 24:00:00</p>
+    </div>
+    <div id="quests">
+        <h2>🎯 Квесты</h2>
+        <div id="quest-list"></div>
+    </div>
+    <div id="achievements">
+        <h2>🏆 Достижения</h2>
+        <div id="achievement-list"></div>
+    </div>
+    <div id="guild">
+        <h2>🛡️ Гильдия</h2>
+        <p id="guild-info">Ты пока не в гильдии</p>
+    </div>
+    <div id="voting">
+        <h2>📊 Голосование за процент выплат</h2>
+        <input type="number" id="payout-input" min="10" max="50" placeholder="10-50%" aria-label="Процент выплат">
+        <input type="submit" value="Голосовать" id="submit-vote-btn">
+        <p>Голосование заканчивается: <span id="voting-timer">Не активно</span></p>
+    </div>
+    <div id="leaderboard" style="display: none;">
+        <h2>🥇 Лидерборд</h2>
+        <div id="leaderboard-list"></div>
+    </div>
+    <div id="tree">
+        <h2>Дерево децентрализованной сети 🌳</h2>
+        <svg id="tree-svg"></svg>
+    </div>
+    <canvas id="chart"></canvas>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <input type="text" id="modal-input" placeholder="Введите значение" aria-label="Ввод данных">
+            <button id="submit-modal-btn">Подтвердить</button>
+            <button id="close-modal-btn">Закрыть</button>
+        </div>
+    </div>
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <h2>Оплата</h2>
+            <input type="number" id="payment-input" placeholder="Сумма в USD" aria-label="Сумма в USD">
+            <button id="submit-payment-btn">Оплатить</button>
+            <button id="close-payment-modal-btn">Закрыть</button>
+        </div>
+    </div>
+    <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
